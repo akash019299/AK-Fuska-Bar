@@ -22,178 +22,44 @@
 <footer>© <span id="year"></span> <span id="footerName">AK Fuska Bar</span></footer>
 <div id="login" class="overlay hidden"><section class="admin"><div class="row"><h2 id="loginTitle">অ্যাডমিন লগইন</h2><button class="btn alt" id="closeLogin">বন্ধ</button></div><p class="warning" id="loginWarning">ডেমো লগইন: <b>admin</b> / <b>admin123</b>। GitHub Pages-এর HTML-এ এই পাসওয়ার্ড নিরাপদ নয়। প্রকৃত নিরাপদ লগইন ও সকল দর্শকের কাছে পরিবর্তন পৌঁছাতে ব্যাকএন্ড লাগবে।</p><form id="loginForm"><label id="userLabel">ইউজারনেম</label><input id="user" autocomplete="username"><label id="passLabel">পাসওয়ার্ড</label><input id="pass" type="password" autocomplete="current-password"><div class="btnrow"><button class="btn" id="loginBtn">লগইন</button></div></form></section></div>
 <div id="adminOverlay" class="overlay hidden"><section class="admin"><div class="row"><h2 id="adminPanelTitle">অ্যাডমিন প্যানেল</h2><div class="btnrow"><button class="btn alt" id="logout">লগআউট</button><button class="btn alt" id="closeAdmin">বন্ধ</button></div></div><p class="warning" id="adminWarning">এখান থেকে সাইটের লেখা, রং, ব্যাকগ্রাউন্ড, বিজ্ঞাপন, ব্যানার/ফেস্টুন, মেনু ও অর্ডার বদলানো যাবে। এখনকার GitHub Pages সংস্করণে পরিবর্তন শুধু এই ব্রাউজারে থাকে; অন্য দর্শকের জন্য ব্যাকএন্ড/ডেটাবেস লাগবে। ছবি/ভিডিও/অডিও IndexedDB-তে থাকে।</p>
-<div class="grid"><section class="section"><h3 id="designTitle">হোমপেজ ও ডিজাইন</h3><label id="labelStoreName">দোকানের নাম</label><input id="sName"><label id="labelTagline">হেডারের ছোট লেখা</label><input id="sTagline"><label id="labelHeroTitle">হোমপেজ শিরোনাম</label><input id="sHeroTitle"><label id="labelHeroText">হোমপেজ বিবরণ</label><textarea id="sHeroText"></textarea><label id="labelMenuTitle">মেনু শিরোনাম</label><input id="sMenuTitle"><label id="labelCartTitle">কার্ট শিরোনাম</label><input id="sCartTitle"><label id="labelNameField">নামের লেবেল</label><input id="sNameLabel"><label id="labelPhoneField">ফোনের লেবেল</label><input id="sPhoneLabel"><label id="labelAddressField">ঠিকানার লেবেল</label><input id="sAddressLabel"><label id="labelPrimaryColor">প্রাথমিক রং</label><input id="sPrimary" type="color"><label id="labelAccentColor">অ্যাকসেন্ট রং</label><input id="sAccent" type="color"><label id="labelBackgroundColor">পটভূমির রং</label><input id="sBg" type="color"><label id="labelBgImage">ব্যাকগ্রাউন্ড ছবি</label><input id="bgFile" type="file" accept="image/*"><button class="btn" id="saveDesign" style="margin-top:10px">সাইট/ডিজাইন সেভ</button><button class="btn alt" id="clearBg" style="margin:10px 0 0 6px">ব্যাকগ্রাউন্ড ছবি সরান</button></section>
+<div class="grid"><section class="section"><h3 id="designTitle">হোমপেজ ও ডিজাইন</h3><label id="labelStoreName">দোকানের নাম</label><input id="sName"><label id="labelTagline">হেডারের ছোট লেখা</label><input id="sTagline"><label id="labelHeroTitle">হোমপেজ শিরোনাম</label><input id="sHeroTitle"><label id="labelHeroText">হোমপেজ বিবরণ</label><textarea id="sHeroText"></textarea><label id="labelMenuTitle">মেনু শিরোনাম</label><input id="sMenuTitle"><label id="labelCartTitle">কার্ট শিরোনাম</label><input id="sCartTitle"><label id="labelNameField">নামের লেবেল</label><input id="sNameLabel"><label id="labelPhoneField">ফোনের লেবেল</label><input id="sPhoneLabel"><label id="labelAddressField">ঠিকানার লেবেল</label><input id="sAddressLabel"><label id="labelPrimaryColor">প্রাথমিক রং</label><input id="sPrimary" type="color"><label id="labelAccentColor">অ্যাকসেন্ট রং</label><input id="sAccent" type="color"><label id="labelBackgroundColor">পটভূমির রং</label><input id="sBg" type="color"><label id="labelBgImage">ব্যাকগ্রাউন্ড ছবি</label><input id="bgFile" type="file" accept="image/*"><button class="btn" id="saveDesign" style="margin-top:10px">সাইট/ডিজাইন সেভ</button><button class="btn alt" id="clearBg">ব্যাকগ্রাউন্ড ছবি সরান</button></section>
 <section class="section"><h3 id="bannerTitle">ব্যানার / ফেস্টুন</h3><label id="bannerTextLabel">ব্যানারের লেখা</label><input id="bText"><label id="bannerMediaLabel">ছবি, ভিডিও বা অডিও</label><input id="bFile" type="file" accept="image/*,video/*,audio/*"><label id="bannerLinkLabel">ব্যানার লিংক (ঐচ্ছিক)</label><input id="bLink"><label><input id="bShow" type="checkbox" style="width:auto"> <span id="bannerShowText">ব্যানার দেখান</span></label><button class="btn" id="saveBanner">ব্যানার সেভ</button><button class="btn alt" id="clearBanner">মিডিয়া সরান</button></section>
 <section class="section"><h3 id="adTitle">হোমপেজের উপরের বিজ্ঞাপন</h3><label id="adTextLabel">বিজ্ঞাপনের লেখা</label><input id="aText"><label id="adMediaLabel">ছবি, ভিডিও বা অডিও</label><input id="aFile" type="file" accept="image/*,video/*,audio/*"><label id="adLinkLabel">বিজ্ঞাপন লিংক (ঐচ্ছিক)</label><input id="aLink"><label><input id="aShow" type="checkbox" style="width:auto"> <span id="adShowText">বিজ্ঞাপন দেখান</span></label><button class="btn" id="saveAd">বিজ্ঞাপন সেভ</button><button class="btn alt" id="clearAd">মিডিয়া সরান</button></section>
 <section class="section"><h3 id="productAddTitle">নতুন খাবার যোগ করুন</h3><label id="labelProductName">খাবারের নাম</label><input id="pName"><label id="labelProductPrice">দাম (৳)</label><input id="pPrice" type="number" min="0"><label id="labelProductDesc">বিস্তারিত</label><textarea id="pDesc"></textarea><label id="labelProductMedia">একাধিক ছবি / ভিডিও / অডিও</label><input id="pFiles" type="file" accept="image/*,video/*,audio/*" multiple><button class="btn" id="addProduct">খাবার যোগ করুন</button></section></div>
 <section class="section"><h3 id="menuEditTitle">মেনু সম্পাদনা</h3><div id="adminProducts"></div></section><section class="section"><h3 id="ordersTitle">অর্ডারসমূহ</h3><div id="orders"></div></section></section></div>
 <script>
 'use strict';
+const LANG_KEY = 'akfb_lang';
+let language = localStorage.getItem(LANG_KEY) === 'en' ? 'en' : 'bn';
+
 const translations = {
-  bn: {
-    openAdmin: 'অ্যাডমিন',
-    searchPlaceholder: 'খাবারের নাম লিখে খুঁজুন…',
-    clear: 'মুছুন',
-    total: 'মোট',
-    checkout: 'অর্ডার করুন',
-    logIn: 'অ্যাডমিন লগইন',
-    close: 'বন্ধ',
-    loginBtn: 'লগইন',
-    user: 'ইউজারনেম',
-    pass: 'পাসওয়ার্ড',
-    adminPanel: 'অ্যাডমিন প্যানেল',
-    logout: 'লগআউট',
-    save: 'সেভ',
-    removeBg: 'ব্যাকগ্রাউন্ড ছবি সরান',
-    removeMedia: 'মিডিয়া সরান',
-    addProduct: 'খাবার যোগ করুন',
-    menuTitle: 'আমাদের মেনু',
-    cartTitle: 'আপনার কার্ট',
-    nameLabel: 'আপনার নাম',
-    phoneLabel: 'ফোন',
-    addressLabel: 'ঠিকানা',
-    searchNoResult: 'মিলেছে এমন কোনো খাবার নেই।',
-    emptyMenu: 'মেনুতে কোনো খাবার নেই।',
-    cartEmpty: 'কার্ট খালি।',
-    productAdd: 'নতুন খাবার যোগ করুন',
-    productEdit: 'এডিট',
-    productDelete: 'মুছুন',
-    orderStatus: 'স্ট্যাটাস',
-    noOrders: 'এখনো অর্ডার নেই।',
-    tagline: 'টাটকা খাবার, আপনার দরজায়',
-    heroTitle: 'মজাদার ফুচকা ও চটপটি',
-    heroText: 'পছন্দের খাবার কার্টে যোগ করুন। অর্ডারের জন্য নাম, ফোন ও ঠিকানা লিখুন।',
-    adminWarning: 'এখান থেকে সাইটের লেখা, রং, ব্যাকগ্রাউন্ড, বিজ্ঞাপন, ব্যানার/ফেস্টুন, মেনু ও অর্ডার বদলানো যাবে। এখনকার GitHub Pages সংস্করণে পরিবর্তন শুধু এই ব্রাউজারে থাকে; অন্য দর্শকের জন্য ব্যাকএন্ড/ডেটাবেস লাগবে। ছবি/ভিডিও/অডিও IndexedDB-তে থাকে।',
-    loginWarning: 'ডেমো লগইন: admin / admin123। GitHub Pages-এর HTML-এ এই পাসওয়ার্ড নিরাপদ নয়। প্রকৃত নিরাপদ লগইন ও সকল দর্শকের কাছে পরিবর্তন পৌঁছাতে ব্যাকএন্ড লাগবে।',
-    addToCart: 'কার্টে যোগ',
-    bannerShow: 'ব্যানার দেখান',
-    adShow: 'বিজ্ঞাপন দেখান',
-    saveBanner: 'ব্যানার সেভ',
-    saveAd: 'বিজ্ঞাপন সেভ',
-    saveDesign: 'সাইট/ডিজাইন সেভ',
-    productName: 'খাবারের নাম',
-    productPrice: 'দাম (৳)',
-    productDesc: 'বিস্তারিত',
-    productMedia: 'একাধিক ছবি / ভিডিও / অডিও',
-    menuEdit: 'মেনু সম্পাদনা',
-    orders: 'অর্ডারসমূহ',
-    language: 'EN',
-    designTitle: 'হোমপেজ ও ডিজাইন',
-    bannerTitle: 'ব্যানার / ফেস্টুন',
-    adTitle: 'হোমপেজের উপরের বিজ্ঞাপন',
-    storeName: 'দোকানের নাম',
-    taglineLabel: 'হেডারের ছোট লেখা',
-    heroTitleLabel: 'হোমপেজ শিরোনাম',
-    heroTextLabel: 'হোমপেজ বিবরণ',
-    menuTitleLabel: 'মেনু শিরোনাম',
-    cartTitleLabel: 'কার্ট শিরোনাম',
-    nameField: 'নামের লেবেল',
-    phoneField: 'ফোনের লেবেল',
-    addressField: 'ঠিকানার লেবেল',
-    primaryColor: 'প্রাথমিক রং',
-    accentColor: 'অ্যাকসেন্ট রং',
-    backgroundColor: 'পটভূমির রং',
-    bgImage: 'ব্যাকগ্রাউন্ড ছবি',
-    bannerText: 'ব্যানারের লেখা',
-    bannerMedia: 'ছবি, ভিডিও বা অডিও',
-    bannerLink: 'ব্যানার লিংক (ঐচ্ছিক)',
-    adText: 'বিজ্ঞাপনের লেখা',
-    adMedia: 'ছবি, ভিডিও বা অডিও',
-    adLink: 'বিজ্ঞাপন লিংক (ঐচ্ছিক)',
-    productNameField: 'খাবারের নাম',
-    productPriceField: 'দাম (৳)',
-    productDescField: 'বিস্তারিত',
-    productMediaField: 'একাধিক ছবি / ভিডিও / অডিও'
-  },
-  en: {
-    openAdmin: 'Admin',
-    searchPlaceholder: 'Search food by name…',
-    clear: 'Clear',
-    total: 'Total',
-    checkout: 'Place Order',
-    logIn: 'Admin Login',
-    close: 'Close',
-    loginBtn: 'Login',
-    user: 'Username',
-    pass: 'Password',
-    adminPanel: 'Admin Panel',
-    logout: 'Logout',
-    save: 'Save',
-    removeBg: 'Remove background image',
-    removeMedia: 'Remove media',
-    addProduct: 'Add Product',
-    menuTitle: 'Our Menu',
-    cartTitle: 'Your Cart',
-    nameLabel: 'Your Name',
-    phoneLabel: 'Phone',
-    addressLabel: 'Address',
-    searchNoResult: 'No matching food found.',
-    emptyMenu: 'No food added yet.',
-    cartEmpty: 'Cart is empty.',
-    productAdd: 'Add new item',
-    productEdit: 'Edit',
-    productDelete: 'Delete',
-    orderStatus: 'Status',
-    noOrders: 'No orders yet.',
-    tagline: 'Fresh food at your door',
-    heroTitle: 'Tasty Fuchka & Chotpoti',
-    heroText: 'Add your favorite food to the cart. Enter your name, phone, and address to order.',
-    adminWarning: 'From here you can change the website text, colors, background, ads, banner/festoon, menu, and orders. In this GitHub Pages version, changes remain in this browser only; a backend/database is required for all users.',
-    loginWarning: 'Demo login: admin / admin123. This password is not secure in static HTML on GitHub Pages. Use a backend for real secure admin access.',
-    addToCart: 'Add to cart',
-    bannerShow: 'Show banner',
-    adShow: 'Show ad',
-    saveBanner: 'Save banner',
-    saveAd: 'Save ad',
-    saveDesign: 'Save design',
-    productName: 'Product name',
-    productPrice: 'Price (৳)',
-    productDesc: 'Description',
-    productMedia: 'Multiple image/video/audio',
-    menuEdit: 'Edit Menu',
-    orders: 'Orders',
-    language: 'বাংলা',
-    designTitle: 'Homepage & Design',
-    bannerTitle: 'Banner / Festoon',
-    adTitle: 'Top Homepage Ad',
-    storeName: 'Shop name',
-    taglineLabel: 'Header short text',
-    heroTitleLabel: 'Homepage title',
-    heroTextLabel: 'Homepage description',
-    menuTitleLabel: 'Menu title',
-    cartTitleLabel: 'Cart title',
-    nameField: 'Name label',
-    phoneField: 'Phone label',
-    addressField: 'Address label',
-    primaryColor: 'Primary color',
-    accentColor: 'Accent color',
-    backgroundColor: 'Background color',
-    bgImage: 'Background image',
-    bannerText: 'Banner text',
-    bannerMedia: 'Image, video or audio',
-    bannerLink: 'Banner link (optional)',
-    adText: 'Ad text',
-    adMedia: 'Image, video or audio',
-    adLink: 'Ad link (optional)',
-    productNameField: 'Product name',
-    productPriceField: 'Price (৳)',
-    productDescField: 'Description',
-    productMediaField: 'Multi media files'
-  }
+  bn: { openAdmin: 'অ্যাডমিন', searchPlaceholder: 'খাবারের নাম লিখে খুঁজুন…', clear: 'মুছুন', total: 'মোট', checkout: 'অর্ডার করুন', logIn: 'অ্যাডমিন লগইন', close: 'বন্ধ', loginBtn: 'লগইন', user: 'ইউজারনেম', pass: 'পাসওয়ার্ড', adminPanel: 'অ্যাডমিন প্যানেল', logout: 'লগআউট', save: 'সেভ', removeBg: 'ব্যাকগ্রাউন্ড ছবি সরান', removeMedia: 'মিডিয়া সরান', addProduct: 'খাবার যোগ করুন', menuTitle: 'আমাদের মেনু', cartTitle: 'আপনার কার্ট', nameLabel: 'আপনার নাম', phoneLabel: 'ফোন', addressLabel: 'ঠিকানা', searchNoResult: 'মিলেছে এমন কোনো খাবার নেই।', emptyMenu: 'মেনুতে কোনো খাবার নেই।', cartEmpty: 'কার্ট খালি।', productAdd: 'নতুন খাবার যোগ করুন', productEdit: 'এডিট', productDelete: 'মুছুন', orderStatus: 'স্ট্যাটাস', noOrders: 'এখনো অর্ডার নেই।', tagline: 'টাটকা খাবার, আপনার দরজায়', heroTitle: 'মজাদার ফুচকা ও চটপটি', heroText: 'পছন্দের খাবার কার্টে যোগ করুন। অর্ডারের জন্য নাম, ফোন ও ঠিকানা লিখুন।', adminWarning: 'এখান থেকে সাইটের লেখা, রং, ব্যাকগ্রাউন্ড, বিজ্ঞাপন, ব্যানার/ফেস্টুন, মেনু ও অর্ডার বদলানো যাবে। এখনকার GitHub Pages সংস্করণে পরিবর্তন শুধু এই ব্রাউজারে থাকে; অন্য দর্শকের জন্য ব্যাকএন্ড/ডেটাবেস লাগবে। ছবি/ভিডিও/অডিও IndexedDB-তে থাকে।', loginWarning: 'ডেমো লগইন: admin / admin123। GitHub Pages-এর HTML-এ এই পাসওয়ার্ড নিরাপদ নয়। প্রকৃত নিরাপদ লগইন ও সকল দর্শকের কাছে পরিবর্তন পৌঁছাতে ব্যাকএন্ড লাগবে।', addToCart: 'কার্টে যোগ', bannerShow: 'ব্যানার দেখান', adShow: 'বিজ্ঞাপন দেখান', saveBanner: 'ব্যানার সেভ', saveAd: 'বিজ্ঞাপন সেভ', saveDesign: 'সাইট/ডিজাইন সেভ', productName: 'খাবারের নাম', productPrice: 'দাম (৳)', productDesc: 'বিস্তারিত', productMedia: 'একাধিক ছবি / ভিডিও / অডিও', menuEdit: 'মেনু সম্পাদনা', orders: 'অর্ডারসমূহ', language: 'EN', designTitle: 'হোমপেজ ও ডিজাইন', bannerTitle: 'ব্যানার / ফেস্টুন', adTitle: 'হোমপেজের উপরের বিজ্ঞাপন', storeName: 'দোকানের নাম', taglineLabel: 'হেডারের ছোট লেখা', heroTitleLabel: 'হোমপেজ শিরোনাম', heroTextLabel: 'হোমপেজ বিবরণ', menuTitleLabel: 'মেনু শিরোনাম', cartTitleLabel: 'কার্ট শিরোনাম', nameField: 'নামের লেবেল', phoneField: 'ফোনের লেবেল', addressField: 'ঠিকানার লেবেল', primaryColor: 'প্রাথমিক রং', accentColor: 'অ্যাকসেন্ট রং', backgroundColor: 'পটভূমির রং', bgImage: 'ব্যাকগ্রাউন্ড ছবি', bannerText: 'ব্যানারের লেখা', bannerMedia: 'ছবি, ভিডিও বা অডিও', bannerLink: 'ব্যানার লিংক (ঐচ্ছিক)', adText: 'বিজ্ঞাপনের লেখা', adMedia: 'ছবি, ভিডিও বা অডিও', adLink: 'বিজ্ঞাপন লিংক (ঐচ্ছিক)', productNameField: 'খাবারের নাম', productPriceField: 'দাম (৳)', productDescField: 'বিস্তারিত', productMediaField: 'একাধিক ছবি / ভিডিও / অডিও' },
+  en: { openAdmin: 'Admin', searchPlaceholder: 'Search food by name…', clear: 'Clear', total: 'Total', checkout: 'Place Order', logIn: 'Admin Login', close: 'Close', loginBtn: 'Login', user: 'Username', pass: 'Password', adminPanel: 'Admin Panel', logout: 'Logout', save: 'Save', removeBg: 'Remove background image', removeMedia: 'Remove media', addProduct: 'Add Product', menuTitle: 'Our Menu', cartTitle: 'Your Cart', nameLabel: 'Your Name', phoneLabel: 'Phone', addressLabel: 'Address', searchNoResult: 'No matching food found.', emptyMenu: 'No food added yet.', cartEmpty: 'Cart is empty.', productAdd: 'Add new item', productEdit: 'Edit', productDelete: 'Delete', orderStatus: 'Status', noOrders: 'No orders yet.', tagline: 'Fresh food at your door', heroTitle: 'Tasty Fuchka & Chotpoti', heroText: 'Add your favorite food to the cart. Enter your name, phone, and address to order.', adminWarning: 'From here you can change the website text, colors, background, ads, banner/festoon, menu, and orders. In this GitHub Pages version, changes remain in this browser only; a backend/database is required for all users.', loginWarning: 'Demo login: admin / admin123. This password is not secure in static HTML on GitHub Pages. Use a backend for real secure admin access.', addToCart: 'Add to cart', bannerShow: 'Show banner', adShow: 'Show ad', saveBanner: 'Save banner', saveAd: 'Save ad', saveDesign: 'Save design', productName: 'Product name', productPrice: 'Price (৳)', productDesc: 'Description', productMedia: 'Multiple image/video/audio', menuEdit: 'Edit Menu', orders: 'Orders', language: 'বাংলা', designTitle: 'Homepage & Design', bannerTitle: 'Banner / Festoon', adTitle: 'Top Homepage Ad', storeName: 'Shop name', taglineLabel: 'Header short text', heroTitleLabel: 'Homepage title', heroTextLabel: 'Homepage description', menuTitleLabel: 'Menu title', cartTitleLabel: 'Cart title', nameField: 'Name label', phoneField: 'Phone label', addressField: 'Address label', primaryColor: 'Primary color', accentColor: 'Accent color', backgroundColor: 'Background color', bgImage: 'Background image', bannerText: 'Banner text', bannerMedia: 'Image, video or audio', bannerLink: 'Banner link (optional)', adText: 'Ad text', adMedia: 'Image, video or audio', adLink: 'Ad link (optional)', productNameField: 'Product name', productPriceField: 'Price (৳)', productDescField: 'Description', productMediaField: 'Multi media files' }
 };
 const defaultProducts=[{id:1,name:'ফুচকা (৮ পিস)',price:80,description:'মুচমুচে ফুচকা, মসলা ও টক পানি দিয়ে পরিবেশন করা হয়।',media:[]},{id:2,name:'দই ফুচকা (৮ পিস)',price:100,description:'দই, মসলা ও মিষ্টি-টক স্বাদের বিশেষ ফুচকা।',media:[]},{id:3,name:'চটপটি',price:70,description:'মটর, আলু, ডিম ও ঘরে তৈরি মসলার চটপটি।',media:[]},{id:4,name:'ফুচকা–চটপটি কম্বো',price:130,description:'ফুচকা ও চটপটির মজাদার কম্বো।',media:[]},{id:5,name:'অতিরিক্ত টক',price:10,description:'বাড়তি টক।',media:[]}];
 const base={name:'AK Fuska Bar',tagline:'টাটকা খাবার, আপনার দরজায়',heroTitle:'মজাদার ফুচকা ও চটপটি',heroText:'পছন্দের খাবার কার্টে যোগ করুন। অর্ডারের জন্য নাম, ফোন ও ঠিকানা লিখুন।',menuTitle:'আমাদের মেনু',cartTitle:'আপনার কার্ট',nameLabel:'আপনার নাম',phoneLabel:'ফোন',addressLabel:'ঠিকানা',primary:'#a83220',accent:'#f2a900',background:'#fff8ed',backgroundMedia:null,bannerText:'আজকের বিশেষ অফার!',bannerMedia:null,bannerLink:'',showBanner:true,adText:'আজ ফুচকা ও চটপটিতে বিশেষ ছাড়!',adMedia:null,adLink:'',showAd:true};
 const $=id=>document.getElementById(id);function read(k,d){try{return JSON.parse(localStorage.getItem(k))??d}catch{return d}}
 let products=read('akfb_products',defaultProducts),cart=read('akfb_cart',[]),orders=read('akfb_orders',[]),settings={...base,...read('akfb_settings',{})};
-let language = localStorage.getItem('akfb_lang') || 'bn';
-function save(){try{localStorage.setItem('akfb_products',JSON.stringify(products));localStorage.setItem('akfb_cart',JSON.stringify(cart));localStorage.setItem('akfb_orders',JSON.stringify(orders));localStorage.setItem('akfb_settings',JSON.stringify(settings));localStorage.setItem('akfb_lang', language)}catch(e){alert('তথ্য সংরক্ষণে সমস্যা হয়েছে। স্টোরেজ সীমা পূর্ণ হতে পারে।')}}
+
+function saveLanguage(){
+  try { localStorage.setItem(LANG_KEY, language); }
+  catch (e) { /* ignored */ }
+}
+function save(){
+  try {
+    localStorage.setItem('akfb_products', JSON.stringify(products));
+    localStorage.setItem('akfb_cart', JSON.stringify(cart));
+    localStorage.setItem('akfb_orders', JSON.stringify(orders));
+    localStorage.setItem('akfb_settings', JSON.stringify(settings));
+    saveLanguage();
+  } catch (e) { alert('তথ্য সংরক্ষণে সমস্যা হয়েছে। স্টোরেজ সীমা পূর্ণ হতে পারে।'); }
+}
 const DB='akfb_media',STORE='files';function openDB(){return new Promise((ok,no)=>{const r=indexedDB.open(DB,1);r.onupgradeneeded=()=>r.result.createObjectStore(STORE,{keyPath:'id'});r.onsuccess=()=>ok(r.result);r.onerror=()=>no(r.error)})}
 async function putFile(file){if(!file)return null;if(file.size>20*1024*1024)throw Error('প্রতি মিডিয়া ফাইল সর্বোচ্চ ২০ MB হতে পারে।');const db=await openDB(),id='m'+Date.now().toString(36)+Math.random().toString(36).slice(2);await new Promise((ok,no)=>{const tx=db.transaction(STORE,'readwrite');tx.objectStore(STORE).put({id,blob:file,type:file.type,name:file.name});tx.oncomplete=ok;tx.onerror=()=>no(tx.error)});db.close();return{id,type:file.type,name:file.name}}
 async function getBlob(id){try{const db=await openDB(),r=await new Promise((ok,no)=>{const q=db.transaction(STORE).objectStore(STORE).get(id);q.onsuccess=()=>ok(q.result);q.onerror=()=>no(q.error)});db.close();return r?.blob||null}catch{return null}}
 function make(tag,txt='',cls=''){const e=document.createElement(tag);e.textContent=txt;if(cls)e.className=cls;return e}function money(v){return'৳'+Number(v||0).toLocaleString('bn-BD')}function safeUrl(s){try{const u=new URL(s);return['http:','https:'].includes(u.protocol)?u.href:''}catch{return''}}
 async function mediaNode(m){if(!m)return null;const blob=await getBlob(m.id);if(!blob)return null;const url=URL.createObjectURL(blob),t=m.type||blob.type;let e;if(t.startsWith('image/'))e=document.createElement('img');else if(t.startsWith('video/')){e=document.createElement('video');e.controls=true;e.playsInline=true}else if(t.startsWith('audio/')){e=document.createElement('audio');e.controls=true}else return null;e.src=url;e.alt=m.name||'মিডিয়া';return e}
 async function fillMedia(root,list=[]){root.replaceChildren();let count=0;for(const m of list){const node=await mediaNode(m);if(node){root.append(node);count++}}if(!count)root.append(make('div','মিডিয়া যোগ করা নেই','muted'))}
-function applyText(key, node, fallback) { if (!node) return; const txt = translations[language][key] || fallback || key; if (node.tagName === 'INPUT' || node.tagName === 'TEXTAREA') node.placeholder = txt; else node.textContent = txt; }
 function updateUIText(){const t=translations[language];$('langSwitch').textContent = t.language; $('openAdmin').textContent = t.openAdmin; $('menuTitle').textContent = t.menuTitle; $('cartTitle').textContent = t.cartTitle; $('totalText').textContent = t.total; $('checkout').textContent = t.checkout; $('productSearch').placeholder = t.searchPlaceholder; $('clearSearch').textContent = t.clear; $('loginTitle').textContent = t.logIn; $('closeLogin').textContent = t.close; $('userLabel').textContent = t.user; $('passLabel').textContent = t.pass; $('loginBtn').textContent = t.loginBtn; $('adminPanelTitle').textContent = t.adminPanel; $('logout').textContent = t.logout; $('closeAdmin').textContent = t.close; $('adminWarning').textContent = t.adminWarning; $('loginWarning').textContent = t.loginWarning; $('designTitle').textContent = t.designTitle; $('bannerTitle').textContent = t.bannerTitle; $('adTitle').textContent = t.adTitle; $('productAddTitle').textContent = t.productAdd; $('menuEditTitle').textContent = t.menuEdit; $('ordersTitle').textContent = t.orders; $('labelStoreName').textContent = t.storeName; $('labelTagline').textContent = t.taglineLabel; $('labelHeroTitle').textContent = t.heroTitleLabel; $('labelHeroText').textContent = t.heroTextLabel; $('labelMenuTitle').textContent = t.menuTitleLabel; $('labelCartTitle').textContent = t.cartTitleLabel; $('labelNameField').textContent = t.nameField; $('labelPhoneField').textContent = t.phoneField; $('labelAddressField').textContent = t.addressField; $('labelPrimaryColor').textContent = t.primaryColor; $('labelAccentColor').textContent = t.accentColor; $('labelBackgroundColor').textContent = t.backgroundColor; $('labelBgImage').textContent = t.bgImage; $('bannerTextLabel').textContent = t.bannerText; $('bannerMediaLabel').textContent = t.bannerMedia; $('bannerLinkLabel').textContent = t.bannerLink; $('bannerShowText').textContent = t.bannerShow; $('adTextLabel').textContent = t.adText; $('adMediaLabel').textContent = t.adMedia; $('adLinkLabel').textContent = t.adLink; $('adShowText').textContent = t.adShow; $('labelProductName').textContent = t.productNameField; $('labelProductPrice').textContent = t.productPriceField; $('labelProductDesc').textContent = t.productDescField; $('labelProductMedia').textContent = t.productMediaField; $('saveDesign').textContent = t.saveDesign; $('saveBanner').textContent = t.saveBanner; $('saveAd').textContent = t.saveAd; $('clearBg').textContent = t.removeBg; $('clearBanner').textContent = t.removeMedia; $('clearAd').textContent = t.removeMedia; $('addProduct').textContent = t.addProduct; $('nameLabel').textContent = t.nameLabel; $('phoneLabel').textContent = t.phoneLabel; $('addressLabel').textContent = t.addressLabel; $('tagline').textContent = t.tagline; $('heroTitle').textContent = t.heroTitle; $('heroText').textContent = t.heroText; $('storeName').textContent = settings.name || 'AK Fuska Bar'; $('footerName').textContent = settings.name || 'AK Fuska Bar'; $('productSearch').setAttribute('placeholder', t.searchPlaceholder); $('clearSearch').textContent = t.clear; $('langSwitch').textContent = language === 'bn' ? 'EN' : 'বাংলা';}
 async function applySettings(){document.documentElement.style.setProperty('--primary',settings.primary||base.primary);document.documentElement.style.setProperty('--accent',settings.accent||base.accent);document.documentElement.style.setProperty('--background',settings.background||base.background);document.body.style.backgroundColor=settings.background||base.background;const bg=settings.backgroundMedia?await getBlob(settings.backgroundMedia.id):null;document.body.style.backgroundImage=bg?`linear-gradient(#ffffff44,#ffffff44),url("${URL.createObjectURL(bg)}")`:'none';renderPromo('banner');renderPromo('ad');updateUIText();}
 async function renderPromo(which){const banner=which==='banner',root=$(which),media=banner?settings.bannerMedia:settings.adMedia,show=banner?settings.showBanner:settings.showAd,copy=banner?settings.bannerText:settings.adText,link=banner?settings.bannerLink:settings.adLink;if(!show||(!media&&!copy)){root.classList.add('hidden');root.replaceChildren();return}root.classList.remove('hidden');root.replaceChildren();const wrap=document.createElement('div');if(media){const n=await mediaNode(media);if(n)wrap.append(n)}if(copy)wrap.append(make('span',copy));const href=safeUrl(link);if(href){const a=document.createElement('a');a.href=href;a.target='_blank';a.rel='noopener';a.setAttribute('aria-label','promotion');a.style.cssText='position:absolute;inset:0;z-index:2';wrap.style.position='relative';wrap.append(a)}root.append(wrap)}
@@ -208,6 +74,6 @@ async function savePromo(which){const b=which==='banner',file=$(b?'bFile':'aFile
 async function addProduct(){const name=$('pName').value.trim(),price=Number($('pPrice').value);if(!name||$('pPrice').value===''||!Number.isFinite(price)||price<0)return alert(language==='bn'?'খাবারের নাম ও সঠিক দাম লিখুন।':'Please enter a valid product name and price.');try{const media=[];for(const f of $('pFiles').files)media.push(await putFile(f));products.unshift({id:Date.now(),name,price,description:$('pDesc').value.trim(),media});$('pName').value='';$('pPrice').value='';$('pDesc').value='';$('pFiles').value='';save();await renderProducts();renderAdminProducts();alert(language==='bn'?'খাবার যোগ হয়েছে।':'Product added.')}catch(e){alert(e.message||'Unable to add product.') }}
 function renderAdminProducts(){const root=$('adminProducts');root.replaceChildren();for(const p of products){const row=make('div','','entry'),line=make('div','','row'),actions=make('div','','btnrow'),edit=make('button',language==='bn'?'এডিট':'Edit','btn alt'),del=make('button',language==='bn'?'মুছুন':'Delete','btn red');line.append(make('span',`${p.name} — ${money(p.price)} · ${(p.media||[]).length} মিডিয়া`));edit.onclick=()=>{const n=prompt(language==='bn'?'খাবারের নাম:':'Product name:',p.name);if(n===null)return;const price=Number(prompt(language==='bn'?'দাম:':'Price:',p.price));if(!n.trim()||!Number.isFinite(price)||price<0)return alert(language==='bn'?'সঠিক নাম ও দাম দিন।':'Please enter a valid name and price.');const desc=prompt(language==='bn'?'বিস্তারিত:':'Description:',p.description||'');if(desc===null)return;p.name=n.trim();p.price=price;p.description=desc;save();renderProducts();renderAdminProducts()};del.onclick=()=>{if(confirm(language==='bn'?'খাবার মুছবেন?':'Delete this item?')){products=products.filter(x=>x.id!==p.id);cart=cart.filter(x=>x.id!==p.id);save();renderProducts();renderCart();renderAdminProducts()}};actions.append(edit,del);line.append(actions);row.append(line);root.append(row)}if(!products.length)root.append(make('p',language==='bn'?'মেনুতে কোনো খাবার নেই।':'No food in menu yet.','muted'))}
 function renderOrders(){const root=$('orders');root.replaceChildren();if(!orders.length){root.append(make('p',language==='bn'?'এখনো অর্ডার নেই।':'No orders yet.','muted'));return}for(const o of orders){const box=make('div','','order');box.append(make('b',`#${o.id} ${o.name} · ${money(o.total)}`),make('div',`ফোন: ${o.phone} | ঠিকানা: ${o.address}`),make('div',`আইটেম: ${o.items.map(i=>`${i.name} × ${i.qty}`).join(', ')}`),make('div',`স্ট্যাটাস: ${o.status} · ${o.date}`));const a=make('div','','btnrow'),s=make('button',language==='bn'?'স্ট্যাটাস':'Status','btn alt'),d=make('button',language==='bn'?'মুছুন':'Delete','btn red');s.onclick=()=>{const v=prompt(language==='bn'?'নতুন স্ট্যাটাস:':'New status:',o.status);if(v!==null){o.status=v;save();renderOrders()}};d.onclick=()=>{if(confirm(language==='bn'?'অর্ডার মুছবেন?':'Delete this order?')){orders=orders.filter(x=>x.id!==o.id);save();renderOrders()}};a.append(s,d);box.append(a);root.append(box)}}
-$('year').textContent=new Date().getFullYear();$('openAdmin').onclick=openAdmin;$('closeLogin').onclick=()=>$('login').classList.add('hidden');$('loginForm').onsubmit=login;$('closeAdmin').onclick=()=>{$('adminOverlay').classList.add('hidden');sessionStorage.removeItem('akfb_admin')};$('logout').onclick=()=>{$('adminOverlay').classList.add('hidden');sessionStorage.removeItem('akfb_admin');$('login').classList.remove('hidden')};$('saveDesign').onclick=saveDesign;$('clearBg').onclick=()=>{settings.backgroundMedia=null;save();applySettings();alert(language==='bn'?'ব্যাকগ্রাউন্ড ছবি সরানো হয়েছে।':'Background image removed.')};$('saveBanner').onclick=()=>savePromo('banner');$('saveAd').onclick=()=>savePromo('ad');$('clearBanner').onclick=()=>{settings.bannerMedia=null;save();renderPromo('banner')};$('clearAd').onclick=()=>{settings.adMedia=null;save();renderPromo('ad')};$('addProduct').onclick=addProduct;$('checkout').onclick=checkout;$('productSearch').addEventListener('input',renderProducts);$('clearSearch').onclick=()=>{$('productSearch').value='';renderProducts();$('productSearch').focus()};$('langSwitch').onclick=()=>{language = language === 'bn' ? 'en' : 'bn'; save(); applySettings(); renderProducts(); renderCart(); renderOrders(); };
+$('year').textContent=new Date().getFullYear();$('openAdmin').onclick=openAdmin;$('closeLogin').onclick=()=>$('login').classList.add('hidden');$('loginForm').onsubmit=login;$('closeAdmin').onclick=()=>{$('adminOverlay').classList.add('hidden');sessionStorage.removeItem('akfb_admin')};$('logout').onclick=()=>{$('adminOverlay').classList.add('hidden');sessionStorage.removeItem('akfb_admin');$('login').classList.remove('hidden')};$('saveDesign').onclick=saveDesign;$('clearBg').onclick=()=>{settings.backgroundMedia=null;save();applySettings();alert(language==='bn'?'ব্যাকগ্রাউন্ড ছবি সরানো হয়েছে।':'Background image removed.')};$('saveBanner').onclick=()=>savePromo('banner');$('saveAd').onclick=()=>savePromo('ad');$('clearBanner').onclick=()=>{settings.bannerMedia=null;save();renderPromo('banner')};$('clearAd').onclick=()=>{settings.adMedia=null;save();renderPromo('ad')};$('addProduct').onclick=addProduct;$('checkout').onclick=checkout;$('productSearch').addEventListener('input',renderProducts);$('clearSearch').onclick=()=>{$('productSearch').value='';renderProducts();$('productSearch').focus()};$('langSwitch').onclick=()=>{language = language === 'bn' ? 'en' : 'bn'; saveLanguage(); applySettings(); renderProducts(); renderCart(); renderOrders();};
 applySettings();renderProducts();renderCart();renderOrders();
 </script></body></html>
