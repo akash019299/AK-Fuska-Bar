@@ -1,0 +1,15 @@
+{
+  "id": "ak-fuska-bar",
+  "name": "AK Fuska Bar",
+  "short_name": "Fuska Bar",
+  "description": "AK Fuska Bar অনলাইন মেনু ও অর্ডার",
+  "lang": "bn",
+  "start_url": "./",
+  "scope": "./",
+  "display": "standalone",
+  "background_color": "#fff8ed",
+  "theme_color": "#a83220",
+  "icons": [
+    { "src": "./app-icon.svg", "sizes": "any", "type": "image/svg+xml", "purpose": "any maskable" }
+  ]
+}

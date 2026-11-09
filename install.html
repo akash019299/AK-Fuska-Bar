@@ -1,0 +1,39 @@
+<!doctype html>
+<html lang="bn">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#a83220">
+  <title>ফোনে অ্যাপ ইনস্টল করুন — AK Fuska Bar</title>
+  <link rel="manifest" href="./manifest.webmanifest">
+  <link rel="icon" href="./app-icon.svg" type="image/svg+xml">
+  <style>
+    :root{font-family:system-ui,-apple-system,"Noto Sans Bengali",sans-serif;color:#29231f;background:#fff8ed}*{box-sizing:border-box}body{margin:0;min-height:100vh;display:grid;place-items:center;padding:20px}.card{width:min(100%,440px);padding:28px;border-radius:22px;background:#fff;box-shadow:0 12px 40px #4a2a171c;text-align:center}.icon{width:88px;height:88px;border-radius:22px}.title{margin:16px 0 8px;font-size:26px}.description{color:#71665e;line-height:1.7}.button{display:block;width:100%;margin-top:20px;padding:14px;border:0;border-radius:12px;background:#a83220;color:#fff;font-size:17px;font-weight:700;cursor:pointer}.button:disabled{opacity:.55;cursor:default}.hint{margin-top:18px;padding:14px;border-radius:12px;background:#fff8ed;color:#51463d;line-height:1.7;text-align:left}.link{display:inline-block;margin-top:18px;color:#a83220}
+  </style>
+</head>
+<body>
+  <main class="card">
+    <img class="icon" src="./app-icon.svg" alt="AK Fuska Bar অ্যাপ আইকন">
+    <h1 class="title">AK Fuska Bar ফোনে নিন</h1>
+    <p class="description">ওয়েব অ্যাপটি ফোনে ইনস্টল করলে হোম স্ক্রিন থেকে সরাসরি খুলতে পারবেন। ইনস্টল করতে ইন্টারনেট চালু রাখুন।</p>
+    <button class="button" id="install" type="button">ফোনে ইনস্টল করুন</button>
+    <div class="hint" id="help">ইনস্টল বাটন না এলে Chrome-এর উপরের ⋮ মেনু খুলে <b>অ্যাপ ইনস্টল করুন</b> বা <b>হোম স্ক্রিনে যোগ করুন</b> বেছে নিন।</div>
+    <a class="link" href="./">ওয়েব অ্যাপ খুলুন</a>
+  </main>
+  <script>
+    let installPrompt;
+    const button=document.getElementById('install');
+    const help=document.getElementById('help');
+    if('serviceWorker' in navigator){navigator.serviceWorker.register('./sw.js').catch(()=>{});}
+    window.addEventListener('beforeinstallprompt',event=>{event.preventDefault();installPrompt=event;button.disabled=false;help.textContent='ইনস্টল করতে নিচের বাটনে চাপ দিন।'});
+    button.addEventListener('click',async()=>{
+      if(!installPrompt){help.textContent='Chrome-এর ⋮ মেনু খুলে “অ্যাপ ইনস্টল করুন” বা “হোম স্ক্রিনে যোগ করুন” বেছে নিন।';return;}
+      installPrompt.prompt();
+      await installPrompt.userChoice;
+      installPrompt=null;
+      button.disabled=true;
+    });
+    window.addEventListener('appinstalled',()=>{button.textContent='ইনস্টল হয়েছে';button.disabled=true;help.textContent='AK Fuska Bar এখন আপনার ফোনের হোম স্ক্রিনে আছে।';});
+  </script>
+</body>
+</html>

@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
+  <rect width="512" height="512" rx="112" fill="#a83220"/>
+  <circle cx="256" cy="256" r="174" fill="#fff8ed"/>
+  <path d="M151 279c0-74 47-126 105-126s105 52 105 126v28H151z" fill="#f2a900"/>
+  <path d="M178 306h156v32c0 25-20 45-45 45h-66c-25 0-45-20-45-45z" fill="#a83220"/>
+  <text x="256" y="272" text-anchor="middle" font-family="Arial,sans-serif" font-size="64" font-weight="700" fill="#29231f">AK</text>
+  <text x="256" y="421" text-anchor="middle" font-family="Arial,sans-serif" font-size="34" font-weight="700" fill="#fff8ed">FUSKA BAR</text>
+</svg>
