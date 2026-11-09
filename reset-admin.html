@@ -1,0 +1,31 @@
+<!doctype html>
+<html lang="bn">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#a83220">
+  <title>অ্যাডমিন লগইন ঠিক করুন — AK Fuska Bar</title>
+  <style>
+    body{font-family:system-ui,sans-serif;background:#fff8ed;color:#29231f;margin:0;min-height:100vh;display:grid;place-items:center;padding:20px}.card{max-width:440px;background:#fff;border:1px solid #eadfd4;border-radius:16px;padding:24px;box-shadow:0 5px 18px #3d26100c}button,a{display:inline-block;background:#a83220;color:#fff;border:0;border-radius:9px;padding:12px 16px;font:inherit;font-weight:700;text-decoration:none;cursor:pointer}#status{line-height:1.6}
+  </style>
+</head>
+<body>
+  <main class="card">
+    <h1>অ্যাডমিন লগইন ঠিক করুন</h1>
+    <p id="status">এই একই ব্রাউজারে ডেমো অ্যাডমিন লগইনটি রিসেট করুন।</p>
+    <button id="reset" type="button">লগইন রিসেট করুন</button>
+    <p><a href="./">AK Fuska Bar খুলুন</a></p>
+  </main>
+  <script>
+    document.getElementById('reset').addEventListener('click',()=>{
+      try{
+        localStorage.setItem('akfb_admin_credentials',JSON.stringify({user:'admin',pass:'admin123'}));
+        sessionStorage.removeItem('akfb_admin');
+        document.getElementById('status').textContent='লগইন রিসেট হয়েছে। এখন মূল অ্যাপে গিয়ে অ্যাডমিন লগইন করুন।';
+      }catch{
+        document.getElementById('status').textContent='ব্রাউজারের storage ব্যবহার করা যাচ্ছে না। Chrome-এ মূল ওয়েবসাইট খুলে আবার চেষ্টা করুন।';
+      }
+    });
+  </script>
+</body>
+</html>
