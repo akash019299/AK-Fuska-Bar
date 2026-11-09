@@ -1,0 +1,10 @@
+rules_version = '2';
+
+service firebase.storage {
+  match /b/{bucket}/o {
+    // Uploads and downloads are mediated by the trusted backend/API.
+    match /{allPaths=**} {
+      allow read, write: if false;
+    }
+  }
+}
